@@ -8,7 +8,7 @@ interface TestResult {
   message?: string;
   type?: string;
   solution?: string;
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 export default function DebugPanel() {
@@ -190,7 +190,7 @@ export default function DebugPanel() {
               Google Sheets Permission Error
             </h4>
             <p className="text-red-700 dark:text-red-300 text-sm">
-              "Exception: Unexpected error while getting the method or property openById on object SpreadsheetApp."
+              &quot;Exception: Unexpected error while getting the method or property openById on object SpreadsheetApp.&quot;
             </p>
             <ul className="text-sm text-red-600 dark:text-red-400 mt-1 space-y-1">
               <li>• Ensure the Google Apps Script has edit access to the Google Sheet</li>

@@ -13,7 +13,7 @@ type CallStatus = "Order Confirmed" | "Not Interested" | "Baat Nahi Ho Payi" | "
 export default function StartCalling() {
   const [lead, setLead] = useState<Lead | null>(null);
   const [loading, setLoading] = useState(false);
-  const [callStatus, setCallStatus] = useState<CallStatus | "">("");
+
   const [notes, setNotes] = useState("");
   const [callCount, setCallCount] = useState(0);
   const [showStatusModal, setShowStatusModal] = useState(false);
@@ -25,7 +25,7 @@ export default function StartCalling() {
       if (res.ok && res.lead) {
         setLead(res.lead);
         setCallCount(res.lead.callCount || 0);
-        setCallStatus("");
+
         setNotes("");
       } else {
         setLead(null);
@@ -94,8 +94,7 @@ export default function StartCalling() {
     );
   }
 
-  // format phone for tel:
-  const tel = lead.phone ? `+${lead.phone}` : "";
+
 
   return (
     <div className="h-full flex flex-col">

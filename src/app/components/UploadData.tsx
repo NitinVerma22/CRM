@@ -36,7 +36,7 @@ export default function UploadData() {
       }).filter(l => (l["Phone Number"] || "").toString().trim() !== "");
 
       setStatus(`Uploading ${leads.length} leads...`);
-      const res = await uploadLeads(leads);
+      await uploadLeads(leads);
       setStatus(`✅ Successfully uploaded ${leads.length} leads!`);
     } catch (error) {
       setStatus("❌ Error processing file. Please check the format.");

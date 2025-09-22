@@ -63,7 +63,7 @@ export async function GET(request: NextRequest) {
 }
 
 // Handle OPTIONS requests for CORS preflight
-export async function OPTIONS(request: NextRequest) {
+export async function OPTIONS() {
   const response = new NextResponse(null, { status: 200 });
   Object.entries(corsHeaders).forEach(([key, value]) => {
     response.headers.set(key, value);
