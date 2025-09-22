@@ -195,7 +195,7 @@ export default function DebugPanel() {
             <ul className="text-sm text-red-600 dark:text-red-400 mt-1 space-y-1">
               <li>• Ensure the Google Apps Script has edit access to the Google Sheet</li>
               <li>• Verify the Sheet ID in the Apps Script code is correct</li>
-              <li>• Check if the Sheet exists and hasn't been deleted</li>
+              <li>• Check if the Sheet exists and has not been deleted</li>
               <li>• Make sure the Apps Script is published with the correct version</li>
             </ul>
           </div>
